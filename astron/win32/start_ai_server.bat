@@ -15,7 +15,7 @@ set /P DISTRICT_NAME="District name (DEFAULT: Gummybear Galaxies): " || ^
 set DISTRICT_NAME=Gummybear Galaxies
 set /P BASE_CHANNEL="Base channel (DEFAULT: 401000000): " || ^
 set BASE_CHANNEL=401000000
-title %DISTRICT_NAME%
+title Ai Server (%DISTRICT_NAME%)
 echo ===============================
 echo Starting Toontown: The Edge server...
 echo ppython: %PPYTHON_PATH%

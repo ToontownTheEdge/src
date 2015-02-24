@@ -129,7 +129,7 @@ class DistributedToonAI(DistributedPlayerAI.DistributedPlayerAI, DistributedSmoo
         self.fishingTrophies = []
         self.trackArray = []
         self.emoteAccess = [0] * 26
-        self.maxMoney = 10000
+        self.maxMoney = 20000
         self.maxBankMoney = ToontownGlobals.MaxBankMoney
         self.gardenSpecials = []
         self.houseType = 0
@@ -2321,7 +2321,7 @@ class DistributedToonAI(DistributedPlayerAI.DistributedPlayerAI, DistributedSmoo
         return self.speedChatStyleIndex
 
     def getMaxMoney(self):
-        return 10000
+        return 20000
 
     def addMoney(self, deltaMoney):
         money = deltaMoney + self.money
@@ -4443,7 +4443,7 @@ def maxToon(missingTrack=None):
 
     # Max their money:
     invoker.b_setMoney(invoker.getMaxMoney())
-    invoker.b_setBankMoney(10000)
+    invoker.b_setBankMoney(20000)
 
     # Finally, unlock all of their pet phrases:
     if simbase.wantPets:
@@ -4530,7 +4530,7 @@ def money(money):
     Modifies the target's current money value.
     """
     target = spellbook.getTarget()
-    maxMoney = 10000
+    maxMoney = 20000
     if not 0 <= money <= maxMoney:
         return 'Money value must be in xrange (0-%d).' % maxMoney
     target.b_setMoney(money)
