@@ -2588,25 +2588,15 @@ class DistributedToon(DistributedPlayer.DistributedPlayer, Toon.Toon, Distribute
             return
         if not gmType:
             gmType = self._gmType
-        iconInfo = [
-            (None, None),
-            ('phase_3.5/models/gui/tt_m_gui_gm_toontroop_getConnected', '**/whistleIcon*'),
-            ('phase_3.5/models/gui/tt_m_gui_gm_toonResistance_fist', '**/*fistIcon*'),
-            ('phase_3.5/models/gui/tt_m_gui_gm_toontroop_getConnected', '**/whistleIcon*'),
-            ('phase_3.5/models/gui/tt_m_gui_gm_toontroop_whistle', '**/whistleIcon*'),
-            ('phase_3.5/models/gui/tt_m_gui_gm_toontroop_whistle', '**/whistleIcon*'),
-            ('phase_3.5/models/gui/tt_m_gui_gm_toontroop_whistle', '**/whistleIcon*')
-        ]
-        index = (gmType / 100) - 1
-        icon = loader.loadModel(iconInfo[index][0])
-        self.gmIcon = icon.find(iconInfo[index][1])
+        icons = loader.loadModel('phase_3/models/props/gm_icons.bam')
+        searchString = '**/access_level_{0}'.format(gmType)
+        self.gmIcon = icons.find(searchString)
         np = NodePath(self.nametag.getIcon())
         if np.isEmpty():
             return
-        self.gmIcon.flattenStrong()
         self.gmIcon.reparentTo(np)
-        self.gmIcon.setScale(4)
-        self.gmIcon.setZ(-2.4)
+        self.gmIcon.setScale(1.5)
+        self.gmIcon.setZ(2.25)
         self.setTrophyScore(self.trophyScore)
         self.gmIconInterval = LerpHprInterval(self.gmIcon, 3.0, Point3(0, 0, 0), Point3(-360, 0, 0))
         self.gmIconInterval.loop()
