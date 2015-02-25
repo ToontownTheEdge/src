@@ -5,8 +5,8 @@ distribution dev
 model-path ../resources
 
 # Server:
-server-version fellowship-dev
-min-access-level 600
+server-version tte_tests
+min-access-level 100
 accountdb-type developer
 shard-low-pop 50
 shard-mid-pop 100
@@ -20,7 +20,7 @@ dc-file astron/dclass/toon.dc
 dc-file astron/dclass/otp.dc
 
 # Core features:
-want-pets #f
+want-pets #t
 want-parties #f
 want-cogdominiums #f
 want-achievements #f

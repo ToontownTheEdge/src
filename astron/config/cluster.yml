@@ -58,7 +58,7 @@ uberdogs:
 roles:
     - type: clientagent
       bind: 0.0.0.0:7199
-      version: "fellowship-dev"
+      version: "tte_tests"
       client:
        relocate: true
        add_interest: enabled
