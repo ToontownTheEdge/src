@@ -1,6 +1,15 @@
 @echo off
 title Toontown: The Edge Console
-cd ..
+echo.UPDATING CLIENT THIS MAY TAKE A MINUTE
+cd C:/repos/resources
+git pull origin master
+echo.RESOURCES ARE DONE UPDATING...NOW SYSTEM FILES
+cd C:/repos/src
+git pull origin master
+cls
+echo.DONE UPDATING
+echo.
+echo.
 
 rem Read the contents of PPYTHON_PATH into %PPYTHON_PATH%:
 set /P PPYTHON_PATH=<PPYTHON_PATH
