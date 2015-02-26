@@ -4998,11 +4998,22 @@ def dna(part, value):
 
 
 @magicWord(category=CATEGORY_CREATIVE, types=[int])
-def bringTheMadness(clothes):
+def getSwag():
     """
-    Applies the Pegboard Nerds Clothes
+    Applies Aqua's swag clothes
     """
-    pass # TODO
+    invoker = spellbook.getInvoker()
+
+    dna = ToonDNA.ToonDNA()
+    dna.makeFromNetString(invoker.getDNAString())
+    dna.topTex = 86
+    dna.sleeveTex = 75
+    dna.botTex = 25
+    dna.botTexColor = 27
+    dna.topTexColor = 27
+    dna.sleeveTexColor = 27
+    invoker.b_setDNAString(dna.makeNetString())
+    return 'Aquas clothes applied!'
 
 
 @magicWord(category=CATEGORY_ADMINISTRATOR, types=[int])
