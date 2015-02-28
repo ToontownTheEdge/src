@@ -6,7 +6,7 @@ model-path ../resources
 
 # Server:
 server-version tte_tests
-min-access-level 600
+min-access-level 100
 accountdb-type local
 shard-low-pop 50
 shard-mid-pop 100
