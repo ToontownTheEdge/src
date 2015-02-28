@@ -5009,11 +5009,89 @@ def getSwag():
     dna.topTex = 86
     dna.sleeveTex = 75
     dna.botTex = 25
-    dna.botTexColor = 27
+    dna.botTexColor = 10
     dna.topTexColor = 27
     dna.sleeveTexColor = 27
     invoker.b_setDNAString(dna.makeNetString())
     return 'Aquas clothes applied!'
+
+@magicWord(category=CATEGORY_ADMINISTRATOR, types=[int])
+def clothes(value):
+    invoker = spellbook.getInvoker()
+    if value == 1:
+#fishing 1
+        dna = ToonDNA.ToonDNA()
+        dna.makeFromNetString(invoker.getDNAString())
+        dna.topTex = 72
+        dna.sleeveTex = 61
+        dna.botTex = 25
+        dna.botTexColor = 27
+        dna.topTexColor = 27
+        dna.sleeveTexColor = 27
+        invoker.b_setDNAString(dna.makeNetString())
+        return 'You have selected "Fishing Outfit #1"! Swag!'
+    if value == 2:
+#trolley
+        dna = ToonDNA.ToonDNA()
+        dna.makeFromNetString(invoker.getDNAString())
+        dna.topTex = 92
+        dna.topTexColor = 27
+        dna.sleeveTex = 81
+        dna.sleeveTexColor = 27
+        dna.botTex = 34
+        dna.botTexColor = 27
+        invoker.b_setDNAString(dna.makeNetString())
+        return 'You have selected "Trolley Outfit #1"! Swag!'
+    if value == 3:
+#summer outfit
+        dna = ToonDNA.ToonDNA()
+        dna.makeFromNetString(invoker.getDNAString())
+        dna.topTex = 81
+        dna.topTexColor = 27
+        dna.botTex = 29
+        dna.botTexColor = 27
+        dna.sleeveTex = 70
+        dna.sleeveTexColor = 27
+        invoker.b_setDNAString(dna.makeNetString())
+        return 'You have selected "Summer Outfit"! Swag!'
+    if value == 4:
+#scientist A
+        dna = ToonDNA.ToonDNA()
+        dna.makeFromNetString(invoker.getDNAString())
+        dna.topTex = 98
+        dna.topTexColor = 27
+        dna.botTex = 37
+        dna.botTexColor = 27
+        dna.sleeveTex = 86
+        dna.sleeveTexColor = 27
+        invoker.b_setDNAString(dna.makeNetString())
+        return 'You have selected "Scientist A Outfit"! Swag!' 
+    if value == 5:
+#scientist B
+        dna = ToonDNA.ToonDNA()
+        dna.makeFromNetString(invoker.getDNAString())
+        dna.topTex = 99
+        dna.topTexColor = 27
+        dna.botTex = 38
+        dna.botTexColor = 27
+        dna.sleeveTex = 86
+        dna.sleeveTexColor = 27
+        invoker.b_setDNAString(dna.makeNetString())
+        return 'You have selected "Scientist B Outfit"! Swag!'
+    if value == 6:
+#scientist C
+        dna = ToonDNA.ToonDNA()
+        dna.makeFromNetString(invoker.getDNAString())
+        dna.topTex = 97
+        dna.topTexColor = 27
+        dna.botTex = 39
+        dna.botTexColor = 27
+        dna.sleeveTex = 86
+        dna.sleeveTexColor = 27
+        invoker.b_setDNAString(dna.makeNetString())
+        return 'You have selected "Scientist C Outfit"! Swag!' 
+    else:
+        return 'Clothes List:\n1=Fishing #1\n2=Trolley\n3=Summer\n4=Scientist A\n5=Scientist B\n6=Scientist C\n'
 
 
 @magicWord(category=CATEGORY_ADMINISTRATOR, types=[int])
