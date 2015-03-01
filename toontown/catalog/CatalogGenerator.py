@@ -84,7 +84,11 @@ class Sale:
 
 CatalogHouseItems = [
   CatalogHouseItem(HouseGlobals.HOUSE_DEFAULT),
-  CatalogHouseItem(HouseGlobals.HOUSE_CABIN)
+  CatalogHouseItem(HouseGlobals.HOUSE_CABIN),
+  CatalogHouseItem(HouseGlobals.HOUSE_CUPCAKE)
+#  CatalogHouseItem(HouseGlobals.HOUSE_CASTLE),
+#  CalogHouseItem(HouseGlobals.HOUSE_TIKI),
+#  CatalogHouseItem(HouseGlobals.HOUSE_TEPEE)
 ]
 
 

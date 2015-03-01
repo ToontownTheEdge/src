@@ -13,6 +13,7 @@ from direct.directnotify import DirectNotifyGlobal
 import BattleParticles
 from toontown.toonbase import ToontownGlobals
 import RewardPanel
+from otp.ai.MagicWordGlobal import *
 notify = DirectNotifyGlobal.directNotify.newCategory('Fanfare')
 
 def makePanel(toon, showToonName):
@@ -59,7 +60,7 @@ def makeFanfareWithMessageImage(delay, toon, showToonName, message, messagePos, 
     makeImageBox(panel.itemFrame, image, imagePos, imageScale)
     return doFanfare(delay, toon, panel)
 
-
+@magicWord(category=CATEGORY_MODERATOR)
 def doFanfare(delay, toon, panel):
     fanfareNode = toon.attachNewNode('fanfareNode')
     partyBall = fanfareNode.attachNewNode('partyBall')
@@ -153,3 +154,5 @@ def doFanfare(delay, toon, panel):
     if panel != None:
         return (seq, panel)
     return (seq, None)
+
+	

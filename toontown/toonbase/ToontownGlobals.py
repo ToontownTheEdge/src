@@ -1696,7 +1696,11 @@ BGagExperienceMultiplier = 1.5
 
 housePrices = {
     HouseGlobals.HOUSE_DEFAULT: 10000,
-    HouseGlobals.HOUSE_CABIN: 20000
+    HouseGlobals.HOUSE_CABIN: 20000,
+	HouseGlobals.HOUSE_CUPCAKE: 20000,
+	HouseGlobals.HOUSE_CASTLE: 20000,
+	HouseGlobals.HOUSE_TIKI: 20000,
+	HouseGlobals.HOUSE_TEPEE: 20000
 }
 
 

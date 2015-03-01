@@ -1,6 +1,6 @@
 @echo off
 cd ../..
-
+title UberDOG Server
 rem Read the contents of PPYTHON_PATH into %PPYTHON_PATH%:
 set /P PPYTHON_PATH=<PPYTHON_PATH
 
@@ -11,7 +11,7 @@ set ASTRON_IP=127.0.0.1:7100
 set EVENTLOGGER_IP=127.0.0.1:7198
 
 rem Get the user input:
-set /P BASE_CHANNEL="Base channel (DEFAULT: 1000000): " || ^
+rem set /P BASE_CHANNEL="Base channel (DEFAULT: 1000000): " || ^
 set BASE_CHANNEL=1000000
 
 echo ===============================
