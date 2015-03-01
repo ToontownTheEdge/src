@@ -1,4 +1,4 @@
-@echo off
+@echo off 
 title Toontown: The Edge Console
 echo.UPDATING CLIENT THIS MAY TAKE A MINUTE
 cd C:/repos/resources
