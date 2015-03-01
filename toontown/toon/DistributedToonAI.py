@@ -5090,7 +5090,7 @@ def clothes(value):
         dna.sleeveTexColor = 27
         invoker.b_setDNAString(dna.makeNetString())
         return 'You have selected "Scientist C Outfit"! Swag!'
-    if value = 7:
+    if value == 7:
 #racing grand prix
         dna = ToonDNA.ToonDNA()
         dna.makeFromNetString(invoker.getDNAString())
