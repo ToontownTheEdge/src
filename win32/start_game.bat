@@ -2,9 +2,9 @@
 title Toontown: The Edge Console
 echo.UPDATING CLIENT THIS MAY TAKE A MINUTE
 cd C:/repos/resources
-git pull origin master
+git pull origin master --quiet
 echo.RESOURCES ARE DONE UPDATING...NOW SYSTEM FILES
-cd C:/repos/src
+cd C:/repos/src --quiet
 git pull origin master
 cls
 echo.DONE UPDATING
